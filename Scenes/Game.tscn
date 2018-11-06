@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Prefabs/Chest.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Book1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Globe.tscn" type="PackedScene" id=3]
 
 [node name="Game" type="Node2D" index="0"]
 
@@ -19,8 +20,10 @@ position = Vector2( 954.886, 530.625 )
 scale = Vector2( 0.8, 0.8 )
 _sections_unfolded = [ "Transform", "collision" ]
 
-[connection signal="body_entered" from="Book1" to="Book1" method="_on_Book1_body_entered"]
+[node name="Globe" parent="." index="2" instance=ExtResource( 3 )]
 
-[connection signal="body_exited" from="Book1" to="Book1" method="_on_Book1_body_exited"]
+position = Vector2( 781.724, 656.496 )
+scale = Vector2( 0.8, 0.8 )
+_sections_unfolded = [ "Transform" ]
 
 

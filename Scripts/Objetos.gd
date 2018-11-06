@@ -2,7 +2,10 @@ extends Area2D
 var startDrag = false
 var startPosition
 var stay
+
 func _ready():
+	self.connect("body_entered",self,"stay")
+	self.connect("body_exited",self,"exit")
 	startPosition = self.position
 	set_process_input(true)
 
@@ -21,9 +24,9 @@ func Drag():
 func _process(delta):
 	Drag()
 
-func _on_Book1_body_entered(body):
+func stay(body):
 	stay = true
 
 
-func _on_Book1_body_exited(body):
+func exit(body):
 	stay = false
