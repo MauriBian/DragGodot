@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Objetos.gd" type="Script" id=1]
+[ext_resource path="res://Images/Objects/book1.png" type="Texture" id=2]
+
+[node name="Book1" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -41.2759, 81.579, -125.985, 32.7086, -121.912, -1.50063, 13.296, -82.9512, 98.0046, -37.3389, 93.9321, 2.5719 )
+
+
