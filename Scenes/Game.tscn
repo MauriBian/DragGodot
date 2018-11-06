@@ -19,4 +19,8 @@ position = Vector2( 954.886, 530.625 )
 scale = Vector2( 0.8, 0.8 )
 _sections_unfolded = [ "Transform", "collision" ]
 
+[connection signal="body_entered" from="Book1" to="Book1" method="_on_Book1_body_entered"]
+
+[connection signal="body_exited" from="Book1" to="Book1" method="_on_Book1_body_exited"]
+
 
